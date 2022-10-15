@@ -45,8 +45,27 @@ def test_3_3():
     else:
         print('test passed')
 
+def test_4_1():
+    try:
+        assert guess_word("слово", "слово")
+    except:
+        print('test error')
+    else:
+        print('test passed')
+
+def test_4_2():
+    try:
+        t = guess_word("слово", "слова")
+        assert t != True
+    except:
+        print('test error')
+    else:
+        print('test passed')
+
 test_1()
 test_2()
 test_3_1()
 test_3_2()
 test_3_3()
+test_4_1()
+test_4_2()
